@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 企业内部E应用Quick-Start示例代码 实现了最简单的免密登录（免登）功能
+ * 企业内部应用-小程序Quick-Start示例代码 实现了最简单的免密登录（免登）功能
  */
 @RestController
 public class IndexController {
@@ -40,7 +40,7 @@ public class IndexController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public ServiceResult login(@RequestParam(value = "authCode") String requestAuthCode) {
-        //获取accessToken,注意正是代码要有异常流处理
+        //获取accessToken,注意线上代码要有异常流处理
         String accessToken = AccessTokenUtil.getToken();
 
         //获取用户信息
